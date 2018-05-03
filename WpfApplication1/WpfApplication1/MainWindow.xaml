@@ -1,0 +1,36 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="525">
+    <Grid>
+        <StackPanel Width="500" Margin="0,20,0,0" Background="Beige" Height="300" VerticalAlignment="Top">
+            
+            <!--height-->
+            <Canvas Height="100">
+                <Border x:Name="HeightBorder"  Background="Turquoise" CornerRadius="10" Height="50" Width="100" Margin="0,25,0,0" Canvas.Left="0">
+                    <TextBlock x:Name="HeightText" Width="100" TextAlignment="Center" Height="50" Padding="0 15 0 0" HorizontalAlignment="Left" Margin="0,0,0,0.4"></TextBlock>
+                </Border>
+            </Canvas>
+            <Slider x:Name="HeightSlider" ValueChanged="HeightSlider_ValueChanged" Maximum="200" Minimum="100" TickFrequency="0.1" IsSnapToTickEnabled="True"></Slider>
+            
+            <!--weight-->
+            <Canvas  Height="100">
+                <Border  x:Name="WeightBorder" Background="Turquoise" CornerRadius="10" Height="50" Width="100" Margin="0,25,0,0" Canvas.Left="0">
+                    <TextBlock x:Name="WeightText" Width="100" TextAlignment="Center" Height="50" Padding="0 15 0 0"></TextBlock>
+                </Border>
+            </Canvas>
+            <Slider x:Name="WeightSlider" ValueChanged="WeightSlider_ValueChanged" Maximum="200" Minimum="1" TickFrequency="0.1" IsSnapToTickEnabled="True"></Slider>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Height="100" VerticalAlignment="Bottom">
+            <TextBlock Height="100" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="40">Bmi計算結果: </TextBlock>
+            <TextBlock x:Name="Result1" Height="100" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="40"/>
+            <TextBlock x:Name="Result2" Height="100" VerticalAlignment="Bottom" HorizontalAlignment="Left" FontSize="20"/>
+        </StackPanel>
+        
+    </Grid>
+</Window>
